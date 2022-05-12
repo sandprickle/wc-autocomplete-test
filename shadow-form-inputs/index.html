@@ -7,36 +7,7 @@
     <title>
       shadow > form > shadows > input | Web Components Autocomplete Test
     </title>
-    <script type="module" src="../src/nav-bar"></script>
-    <script type="module">
-      import { html, css, LitElement } from 'lit'
-      import '../src/my-submit-button'
-      import '../src/my-email-input'
-      import '../src/my-password-input'
-
-      class MyLoginForm extends LitElement {
-        render() {
-          return html`
-            <form autocomplete="on">
-              <my-email-input></my-email-input>
-              <my-password-input></my-password-input>
-              <button type="submit">Login</button>
-              <my-submit-button></my-submit-button>
-            </form>
-          `
-        }
-
-        static styles = css`
-          form {
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
-          }
-        `
-      }
-
-      customElements.define('my-login-form', MyLoginForm)
-    </script>
+    <script type="module" src="../main.js"></script>
     <link rel="stylesheet" href="../style.css" />
   </head>
   <body>
@@ -45,7 +16,7 @@
       <div class="login">
         <h2>Login</h2>
         <p>Form inside shadow root, inputs inside shadow roots</p>
-        <my-login-form></my-login-form>
+        <login-form-custom-inputs></login-form-custom-inputs>
       </div>
     </div>
   </body>

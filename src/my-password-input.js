@@ -1,4 +1,4 @@
-import { html, LitElement } from "lit";
+import { html, LitElement } from 'lit'
 
 export class MyPasswordInput extends LitElement {
   render() {
@@ -11,8 +11,8 @@ export class MyPasswordInput extends LitElement {
         autocomplete="current-password"
         required
       />
-    `;
+    `
   }
 }
 
-customElements.define("my-password-input", MyPasswordInput);
+customElements.define('my-password-input', MyPasswordInput)

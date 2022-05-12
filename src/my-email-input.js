@@ -1,4 +1,4 @@
-import { html, LitElement } from "lit";
+import { html, LitElement } from 'lit'
 
 export class MyEmailInput extends LitElement {
   render() {
@@ -11,8 +11,8 @@ export class MyEmailInput extends LitElement {
         autocomplete="email"
         required
       />
-    `;
+    `
   }
 }
 
-customElements.define("my-email-input", MyEmailInput);
+customElements.define('my-email-input', MyEmailInput)
