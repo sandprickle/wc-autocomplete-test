@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/src/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>form > shadows > input | Web Components Autocomplete Test</title>
+    <script type="module" src="../src/nav-bar"></script>
+    <script type="module" src="../src/my-email-input"></script>
+    <script type="module" src="../src/my-password-input"></script>
+    <script type="module" src="../src/my-submit-button"></script>
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body>
+    <nav-bar></nav-bar>
+    <div class="container">
+      <div class="login">
+        <h2>Login</h2>
+        <p>Shadow inputs within light form</p>
+        <form autocomplete="on">
+          <my-email-input></my-email-input>
+          <my-password-input></my-password-input>
+          <button type="submit">Login</button>
+          <my-submit-button></my-submit-button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

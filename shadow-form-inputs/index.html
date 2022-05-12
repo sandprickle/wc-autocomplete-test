@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/src/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      shadow > form > shadows > input | Web Components Autocomplete Test
+    </title>
+    <script type="module" src="../src/nav-bar"></script>
+    <script type="module">
+      import { html, css, LitElement } from 'lit'
+      import '../src/my-submit-button'
+      import '../src/my-email-input'
+      import '../src/my-password-input'
+
+      class MyLoginForm extends LitElement {
+        render() {
+          return html`
+            <form autocomplete="on">
+              <my-email-input></my-email-input>
+              <my-password-input></my-password-input>
+              <button type="submit">Login</button>
+              <my-submit-button></my-submit-button>
+            </form>
+          `
+        }
+
+        static styles = css`
+          form {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+          }
+        `
+      }
+
+      customElements.define('my-login-form', MyLoginForm)
+    </script>
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body>
+    <nav-bar></nav-bar>
+    <div class="container">
+      <div class="login">
+        <h2>Login</h2>
+        <p>Form inside shadow root, inputs inside shadow roots</p>
+        <my-login-form></my-login-form>
+      </div>
+    </div>
+  </body>
+</html>
